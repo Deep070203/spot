@@ -1,0 +1,33 @@
+{
+  "name": "spot",
+  "version": "0.1.0",
+  "description": "Spot — autonomous, proof-first bug finder, evaluator, code-fix agent, and open-source PR contributor pipeline powered by Muse Ember",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "spot": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli/index.js",
+    "ui": "node dist/server/index.js",
+    "test": "node --test dist/test/**/*.test.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "octokit": "^4.1.2",
+    "openai": "^4.85.0",
+    "simple-git": "^3.27.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.0",
+    "typescript": "^5.8.2"
+  }
+}
