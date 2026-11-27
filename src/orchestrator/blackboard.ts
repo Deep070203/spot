@@ -90,8 +90,13 @@ export const BugHypothesisSchema = z.object({
   confidence: z.number().min(0).max(1),
   affectedFiles: z.array(z.string()),
   entryPoint: z.string().optional(),
+  targetSymbol: z.string().optional(),
   reproHypothesis: z.string(),
   evidence: z.array(z.string()),
+  probeFilePath: z.string().optional(),
+  probeCommand: z.string().optional(),
+  probeContent: z.string().optional(),
+  probeOutput: z.string().optional(),
   sourceIssueNumber: z.number().int().positive().optional(),
 });
 export type BugHypothesis = z.infer<typeof BugHypothesisSchema>;
